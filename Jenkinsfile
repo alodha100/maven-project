@@ -1,4 +1,5 @@
-pipeline {
+pipeline 
+{
     agent any
 
     stages 
@@ -35,7 +36,7 @@ pipeline {
 					
 					buildj job: 'deploy-to-production'
 			
-			}
+			        }
 			post{
 			success
 					{
@@ -46,6 +47,6 @@ pipeline {
 				}
 			
 			}
-			
+			}
 	}
 }
