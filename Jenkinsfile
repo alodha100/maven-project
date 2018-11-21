@@ -33,7 +33,7 @@ pipeline
 				{
 						timeout(time:5,unit:'DAYS')
 						{
-						   inputmessage:'Approve Production deployment? '
+						   input message:'Approve Production deployment? '
 						}
 						
 						build job: 'deploy-to-production'
