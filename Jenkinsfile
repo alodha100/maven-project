@@ -29,14 +29,16 @@ pipeline
 			}
 			stage('Deploy to production') 
 			{
-				steps {
-						timeout(time:5,unit:'DAYS'){
-						inputmessage:'Approve Production deployment ?'
-					}
-					
-					buildj job: 'deploy-to-production'
-			
-			        }
+				steps 
+				{
+						timeout(time:5,unit:'DAYS')
+						{
+						   inputmessage:'Approve Production deployment ?'
+						}
+						
+						buildj job: 'deploy-to-production'
+				}
+				
 			post{
 			success
 					{
